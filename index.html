@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Framehunt · Movie Search</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="top">
+        <a class="brand" href="./"
+          ><span class="logo">F</span
+          ><span
+            ><strong>FRAMEHUNT</strong
+            ><small>CURATED MOVIE DISCOVERY</small></span
+          ></a
+        ><span class="watch" id="watchCount">0 in watchlist</span>
+      </header>
+      <section class="hero">
+        <span>INDIA EDITION · LEGAL DISCOVERY</span>
+        <h1>Find your next frame.</h1>
+        <p>Explore Hollywood, Bollywood and South Indian favourites, then continue on official streaming-platform searches.</p>
+      </section>
+      <section class="controls">
+        <input id="search" placeholder="Search movies…" /><select id="genre">
+          <option value="all">All genres</option></select
+        ><select id="year">
+          <option value="all">All years</option></select
+        ><select id="region">
+          <option value="all">All industries</option>
+          <option value="Hollywood">Hollywood</option>
+          <option value="Bollywood">Bollywood</option>
+          <option value="South Indian">South Indian</option></select
+        ><select id="platform">
+          <option value="all">All platforms</option>
+          <option value="Netflix">Netflix</option>
+          <option value="Prime Video">Prime Video</option>
+          <option value="JioHotstar">JioHotstar</option></select
+        ><button id="watchOnly">Watchlist: Off</button>
+      </section>
+      <div class="meta">
+        <span id="resultCount"></span
+        ><span>Availability changes by region · verify on the official platform</span>
+      </div>
+      <section class="grid" id="grid"></section>
+      <footer class="sudesh-credit" style="position:relative;margin-top:42px;padding:32px 24px 18px;border:1px solid #5261812b;border-radius:18px;background:linear-gradient(135deg,#050a15f2,#071525eb 55%,#16091ceb);color:#91a0b9;font:500 12px/1.7 Inter,system-ui,sans-serif;overflow:hidden">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,#22d3ee14 50%,transparent 50.2%),linear-gradient(#a855f70d 1px,transparent 1px);background-size:420px 100%,100% 46px;pointer-events:none"></div>
+        <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:42px;align-items:start">
+          <section>
+            <strong style="display:block;color:#f8fafc;font:800 20px/1.1 ui-monospace,monospace;letter-spacing:.04em"><span style="color:#22d3ee">[</span><span style="color:#a855f7">SM</span><span style="color:#22d3ee">]</span></strong>
+            <p style="max-width:430px;margin:16px 0 10px;color:#9eabc1;font-size:14px">Learning by building — from modern web experiences to strong software-engineering fundamentals.</p>
+            <small style="display:block;color:#71829d;font:700 9px ui-monospace,monospace;letter-spacing:.2em">B.TECH IT STUDENT · FULL STACK DEVELOPER · BUILDER</small>
+            <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+              <a aria-label="GitHub" href="https://github.com/sudesh4545" target="_blank" rel="noreferrer" style="display:grid;place-items:center;width:40px;height:40px;border:1px solid #60708e55;border-radius:11px;color:#dce8ff;text-decoration:none">GH</a>
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/sudeshmehar3/" target="_blank" rel="noreferrer" style="display:grid;place-items:center;width:40px;height:40px;border:1px solid #60708e55;border-radius:11px;color:#dce8ff;text-decoration:none">in</a>
+              <a aria-label="Email" href="mailto:sudeshmehar3@gmail.com" style="display:grid;place-items:center;width:40px;height:40px;border:1px solid #60708e55;border-radius:11px;color:#dce8ff;text-decoration:none">@</a>
+              <a aria-label="Portfolio" href="https://sudesh4545.github.io/sudesh-portfolio/" target="_blank" rel="noreferrer" style="display:grid;place-items:center;width:40px;height:40px;border:1px solid #60708e55;border-radius:11px;color:#dce8ff;text-decoration:none">↗</a>
+            </div>
+          </section>
+          <section>
+            <small style="display:block;color:#f8fafc;font:800 9px ui-monospace,monospace;letter-spacing:.2em">GET IN TOUCH</small>
+            <a href="mailto:sudeshmehar3@gmail.com" style="display:block;margin-top:17px;color:#9eabc1;text-decoration:none;font-size:14px">sudeshmehar3@gmail.com</a>
+            <p style="margin:12px 0;color:#9eabc1;font-size:14px">New Delhi, India</p>
+            <p style="display:flex;align-items:center;gap:8px;margin:12px 0;color:#bad8cb"><i style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1ee6a7;box-shadow:0 0 14px #1ee6a7"></i>Open to internships &amp; collaboration</p>
+            <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:20px"><span style="padding:3px 9px;border:1px solid #52618144;border-radius:5px;font:600 9px ui-monospace,monospace">JavaScript</span><span style="padding:3px 9px;border:1px solid #52618144;border-radius:5px;font:600 9px ui-monospace,monospace">HTML</span><span style="padding:3px 9px;border:1px solid #52618144;border-radius:5px;font:600 9px ui-monospace,monospace">CSS</span></div>
+          </section>
+        </div>
+        <div style="position:relative;margin-top:28px;padding-top:16px;border-top:1px solid #5261812b;color:#65738c;font-size:10px">© 2026 Sudesh Mehar. Built with code, curiosity and creativity.</div>
+      </footer>
+    </main>
+    <div class="modal" id="modal" hidden>
+      <article
+        class="dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="detailTitle"
+      >
+        <div class="detail-head">
+          <span>FRAMEHUNT / DETAILS</span
+          ><button class="close" id="close">×</button>
+        </div>
+        <div class="detail-art" id="detailArt"><h2 id="detailTitle"></h2></div>
+        <div class="tags" id="tags"></div>
+        <p id="description"></p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+          <a id="trailerLink" target="_blank" rel="noreferrer" style="padding:10px 14px;border-radius:10px;background:#ef4444;color:white;text-decoration:none;font-weight:700">Search trailers</a>
+          <a id="discoverLink" target="_blank" rel="noreferrer" style="padding:10px 14px;border:1px solid #ffffff26;border-radius:10px;color:white;text-decoration:none;font-weight:700">Find legal viewing options</a>
+        </div>
+        <div id="providerLinks" style="display:flex;gap:9px;flex-wrap:wrap;margin-top:10px"></div>
+      </article>
+    </div>
+    <script src="./script.js"></script>
+    
+  </body>
+</html>
+
+
